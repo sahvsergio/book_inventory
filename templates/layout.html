@@ -1,0 +1,36 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content=" A Collection of nice books">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/index.css">
+        <title>Book Inventory App </title>
+
+
+
+    </head>
+
+    <body>
+        <section class="main-header">
+            <a href="{{url_for('index')}}">
+             <h1 class="header">Book Inventory App</h1>
+            </a>
+            {% block button %}
+            {% endblock %}
+
+
+        </section>
+
+        {% block content %}
+        {% endblock %}
+
+       
+
+        
+
+
+
+    </body>
+</html>

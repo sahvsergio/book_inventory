@@ -1,0 +1,15 @@
+
+:root{
+/* CSS HSL */
+--dark-jungle-green: hsla(87, 18%, 10%, 1);
+--desert-sand: hsla(27, 62%, 77%, 1);
+--burlywood: hsla(29, 54%, 69%, 1);
+--dark-brown: hsla(31, 38%, 26%, 1);
+--black-chocolate: hsla(107, 33%, 5%, 1);
+}
+
+
+*{font-family:'Roboto', 'Arial'.sans-serif;
+
+
+}
