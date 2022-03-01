@@ -1,8 +1,9 @@
 # !/usr/bin/env/python
 
 import flask
-from flask import Flask,render_template
-from flask import url_for
+from flask import (Flask,render_template,
+,url_for, request)
+
 #create instance of Flask
 app= Flask(__name__)
 
@@ -12,8 +13,9 @@ app= Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/addbook')
+@app.route('/addbook',methods=['GET','POST'])
 def add_book():
+    print(request.form)
     return render_template('addbook.html')
 
 

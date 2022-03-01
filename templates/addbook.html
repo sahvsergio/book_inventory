@@ -10,13 +10,18 @@
 
     <a href="{{url_for('add_book')}}">
         <div>
-            <h2></h2>
+            <h2>Add a Book</h2>
             <p>Age</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
-        </div>
+
+                <form action="{{url_for(add_book)}}"metod="POST">
+                    <label for="">Name</label>
+                    <input  name=type="text">
+                </form>
+                <
 
 
     </a>
