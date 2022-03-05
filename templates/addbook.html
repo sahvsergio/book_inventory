@@ -5,7 +5,7 @@
 
 {% endblock %}
 
-{%block content %}
+{% block content %}
 <section>
 
     <a href="{{url_for('add_book')}}">
@@ -17,7 +17,7 @@
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
 
-                <form action="{{url_for(add_book)}}"metod="POST">
+                <form action="{{url_for('add_book')}}"metod="POST">
                     <label for="">Name</label>
                     <input  name=type="text">
                 </form>

@@ -1,0 +1,31 @@
+:root{
+    /* CSS HEX */
+
+
+/* CSS HSL */
+--dark-sienna: hsla(9, 65%, 8%, 1);
+--dark-jungle-green: hsla(120, 100%, 3%, 1);
+--desert-sand: hsla(26, 69%, 85%, 1);
+--rich-black-fogra-39: hsla(135, 86%, 3%, 1);
+--battleship-grey: hsla(24, 2%, 53%, 1);
+}
+
+html{
+    
+
+}
+body{
+    background-color:var(--battleship-grey);
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    
+}
+h1{background-color:var(--dark-sienna);
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+
+
+}
+
+    

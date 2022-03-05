@@ -5,7 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content=" A Collection of nice books">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet"  href="../static/index.css">
+        <link rel="stylesheet"  type="text/css" href="/static/index.css">
+        <!-- Font -->
+        <script src="https://kit.fontawesome.com/4b64818846.js" crossorigin="anonymous"></script>
+        
         <title>Book Inventory App </title>
 
 
@@ -15,9 +18,10 @@
     <body>
         <section class="main-header">
             <a href="{{url_for('index')}}">
-             <h1 class="header">Book Inventory App</h1>
+             <h1 Book Inventory App</h1>
             </a>
             {% block button %}
+
             {% endblock %}
 
 
