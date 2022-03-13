@@ -5,27 +5,39 @@
 /* CSS HSL */
 --dark-sienna: hsla(9, 65%, 8%, 1);
 --dark-jungle-green: hsla(120, 100%, 3%, 1);
---desert-sand: hsla(26, 69%, 85%, 1);
+--desert-sand: hsla(26, 69%, 85%, 0.9);
 --rich-black-fogra-39: hsla(135, 86%, 3%, 1);
 --battleship-grey: hsla(24, 2%, 53%, 1);
 }
 
-html{
-    
+body {
+    background-color:#FDFDFD;
+   
+}
+.main-header{
+    background-color:#010101;
+            }
+#logo{
+     width:200px;
+     height:200px;
+     position:relative;
+     left:300px;
+
 
 }
-body{
-    background-color:var(--battleship-grey);
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    
-}
-h1{background-color:var(--dark-sienna);
+h1{ 
+    color:#FDFDFD;
     text-decoration: none;
     padding: 10px 15px 10px 15px;
-
-
+    position:relative;
+    bottom: 150px;px;
+    left:500px;
 }
 
-    
+form{
+    background-color:var(--dark-sienna);
+    display:flex;
+    flex-direction:column;
+
+}
+fieldset{margin-top:20px;}
