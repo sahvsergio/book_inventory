@@ -9,6 +9,7 @@
 <section>
 
     <a href="{{url_for('add_book')}}">
+        
         <div>
             <h2>Add a Book</h2>
             <p>Age</p>
@@ -20,19 +21,19 @@
                 <form action="{{url_for('add_book')}}"metod="POST">
                     <fieldset>
                         <legend>General Book Information</legend>
-                            <label for="">Book Name</label>
-                                <input type="text">
+                            <label for="book_name">Book Name</label>
+                                <input id="book_name"type="text" name="book_name">
 
-                            <label for="">Date Published</label>
+                            <label for="date_published">Date Published</label>
 
-                                <input type="">
+                                <input  id="date_published"type="date">
+                              
 
-                             <label for="">Genre</label>
+                             <label for="Genre">Genre</label>
                     
                                  <input type="text">
                     </fieldset>
-                    <fieldset
-                    ></fieldset>
+                    
 
                 </form>
                 

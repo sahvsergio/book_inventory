@@ -1,2 +1,2 @@
-let greeting = 'Welcome to the book inventory app';
-message(greeting);
+let  greeting='welcome to the book inventory app!';
+alert(greeting);

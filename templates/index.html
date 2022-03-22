@@ -9,10 +9,15 @@
  <section>  
 
      <a href="{{url_for('add_book')}}">
-         <div>
-            <h2>Book Name</h2>
-            </a>
-            
+        
+    <div  class='card'>
+        {% for book in books %}
+        <a href="{{ url_for('book', id=book.id) }}"></a>
+
+        <img src= "{{book.url}} alt="" >     
+        <h2>Book Name</h2>
+     </a>
+{% endfor %}            
             <p>Welcome to the book inventory app,Here you will be able to review and update the inventory of your books</p>
             
          </div>
