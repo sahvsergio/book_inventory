@@ -1,33 +1,31 @@
 {%extends'layout.html' %}
    
 {%block button %}
-<a href={{url_for('add_book')}}>Add Book</a>
+<button href={{url_for('add_book')}}>Add Book</button>
    
 {% endblock %}
 
 {%block content %}
- <section>  
-
-     <a href="{{url_for('add_book')}}">
+<section id ="intro"></section>
+ <section id ='book-cards'>  
+    {% for book in books %}
+<</p>
+       
+         <a href="{{ url_for('book',id=book.id) }}">
+                <div  class='card'>
+                    <img src"{{book.url}}" alt="book.url_tag">
+                    <h2> { {book.name }}</h2>
+                     <h3>{{ book.date_publshed }}</book></h3>
+                     <p>{{ book.description }}</p>
         
-    <div  class='card'>
-        {% for book in books %}
-        <a href="{{ url_for('book', id=book.id) }}"></a>
-
-        <img src= "{{book.url}} alt="" >     
-        <h2>Book Name</h2>
-     </a>
-{% endfor %}            
-            <p>Welcome to the book inventory app,Here you will be able to review and update the inventory of your books</p>
+   
+             
             
-         </div>
             
-
-     
-
-      
-
-     </section>
+                </div>
+                </a>
+                {% endfor %}
+</section>
      {% endblock %}
 
 

@@ -16,17 +16,37 @@ from models import db, Book, app
 
 @app.route('/')#decorator
 def index():
-    return render_template('index.html')
+    books=Book.query.all()
+    return render_template('index.html', books=books)
 
 
-""" app.route('/book/<id>')
-def book():
-    return render_template('book.html') """
+app.route('/book/<id>')
+def book(id):
+    book=Book.query.get(id)
+    return render_template('book.html', book=book)
 
 @app.route('/addbook',methods=['GET','POST'])
 def add_book():
-    print(request.form)
-    return render_template('addbook.html')  
+    """ if request.form:
+        print(request.form)
+        new_book=Book(name=request.form['Book name],
+        Age= request.form[],
+        Age= request.form[],
+        Age= request.form[],
+        Age= request.form[].
+        Age= request.form[],
+        Age= request.form[],
+        Age= request.form[],
+        Age= request.form[],
+        Age= request.form[]
+        Age= request.form[]
+        )
+        db.session.add(new_book)
+        db.session.commit()
+        return redirect(url_for('index
+        ))    
+        """
+    return render_template('addbook.html')      
 
 
 

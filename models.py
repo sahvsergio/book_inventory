@@ -17,7 +17,8 @@ class Book(db.Model):
     date_sold = db.Column('Date Sold',db.String())
     language = db.Column('Language',db.String())
     description = db.Column('Description',db.Text)
-    url=db.Column('url', db.String())
+    
+
 
 #finish creating the fields here, before setting the site again
     def __repr__(self):
@@ -28,7 +29,7 @@ class Book(db.Model):
                 Date Sold:{self.date_sold}
                 Language: {self.language}
                 Description: {self.description}
-                Url:{self.url}
+                
                 )
                 '''
 

@@ -12,12 +12,9 @@
 
     <a href="{{url_for('add_book')}}">
         <div>
-            <h2>Book Name</h2>
-            <p>Age</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
+            <h2>{{ book.name }}</h2>}
+            <p>{{ book.date_published }}</p>
+            <p>{{ book.description }}</p>
         </div>
 
 
