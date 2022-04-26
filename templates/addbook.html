@@ -18,11 +18,11 @@
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
 
-                <form action="{{url_for('add_book')}}"metod="POST">
+                <form action="{{ url_for('add_book')}}"method="POST">
                     <fieldset>
                         <legend>General Book Information</legend>
                             <label for="book_name">Book Name</label>
-                                <input id="book_name"type="text" name="book_name">
+                                <input id="book_name"type="text" >
 
                             <label for="date_published">Date Published</label>
 
@@ -31,7 +31,7 @@
 
                              <label for="Genre">Genre</label>
                     
-                                 <input type="text">
+                                 <input type="text" id="Genre">
                     </fieldset>
 
                     <fieldset>

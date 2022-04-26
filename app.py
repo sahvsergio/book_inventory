@@ -27,26 +27,8 @@ def book(id):
 
 @app.route('/addbook',methods=['GET','POST'])
 def add_book():
-    """ if request.form:
-        print(request.form)
-        new_book=Book(name=request.form['Book name],
-        Age= request.form[],
-        Age= request.form[],
-        Age= request.form[],
-        Age= request.form[].
-        Age= request.form[],
-        Age= request.form[],
-        Age= request.form[],
-        Age= request.form[],
-        Age= request.form[]
-        Age= request.form[]
-        )
-        db.session.add(new_book)
-        db.session.commit()
-        return redirect(url_for('index
-        ))    
-        """
-    return render_template('addbook.html')      
+    return render_template('addbook.html')
+
 
 
 

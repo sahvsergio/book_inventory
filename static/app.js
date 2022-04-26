@@ -1,2 +1,1 @@
-let greeting='Welcome to my book inventory app!';
-alert(greeting);
+alert('Welcome to my book inventory app')
