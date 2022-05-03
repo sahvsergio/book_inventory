@@ -1,14 +1,14 @@
 {%extends'layout.html' %}
 
 {%block button %}
-<a href={{url_for('add_book')}}>Add Book</a>
+
 
 {% endblock %}
 
 {% block content %}
 <section>
 
-    <a href="{{url_for('add_book')}}">
+   
         
         <div>
             <h2>Add a Book</h2>
@@ -18,7 +18,58 @@
                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.</p>
 
-                <form action="{{ url_for('add_book')}}"method="POST">
+
+                <form action="{{ url_for('add_book')}}" method="POST">
+                    <fieldset>
+                        <legend>Book</legend>
+                        <div class="mb-3">
+                            <label for="bookname" class="form-label">Name of the book </label>
+                                <input  name="book_name"type="text" class="form-control" id="bookname" aria-describedby="bookname"placeholder="Please enter the name of the book in English">
+                        
+                        </div>
+                        <div class="mb-3">
+                             <label for="ISBN" class="form-label">ISBN </label>
+                                <input name="ISBN" type="text" class="form-control" id="ISBN" aria-describedby="ISBN"
+                            placeholder="Please enter ISBN for the book">
+                    
+                         </div>
+                         <div class="mb-3">
+                            <label for="date_pusblished" class="form-label"placeholder="Please enter the  Publication date ">Date Published</label>
+                                <input name="date_pusblished" type="date" class="form-control" id="date_pusblished">
+                        </div>
+                        <div class="mb-3">
+                            <label for="date_sold" class="form-label" placeholder="Please enter the date sold ">Date
+                            Sold</label>
+                                <input type="date"  name="date_sold"class="form-control" id="date_sold">
+                        <div class="mb-3">
+                            <label for="genre" class="form-label" placeholder="Genre ">Genre</label>
+                                <input type="text" class="form-control" id="genre" name="genre">
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="number_of_pages" class="form-label"  >Number of Pages</label>
+                                <input type="number" class="form-control" id="number_of_pages" name="number_of_pages">
+                    
+                        </div>
+                        <div class="mb-3">
+                            <label for="language" class="form-label">Language</label>
+                            <input type="text" class="form-control" id="language" name="language">
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="number_of_pages" class="form-label">Description</label>
+                            <textarea class="form-control" id="number_of_pages" name="description" > </textarea>
+
+                        
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form> 
+
+<!-- 
+
+                <form action=">
                     <fieldset>
                         <legend>General Book Information</legend>
                             <label for="book_name">Book Name</label>
@@ -41,9 +92,8 @@
 
                 </form>
                 
+ -->
 
-
-    </a>
 
 
 

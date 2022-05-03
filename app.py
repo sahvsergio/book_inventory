@@ -6,7 +6,7 @@ from flask import render_template
 from flask import url_for
 from flask import redirect
 from flask import request
-from models import db, Book, app
+from models import db, Book, app, Flask
 
 
 #create instance of Flask
@@ -20,14 +20,35 @@ def index():
     return render_template('index.html', books=books)
 
 
-app.route('/book/<id>')
-def book(id):
-    book=Book.query.get(id)
-    return render_template('book.html', book=book)
+
 
 @app.route('/addbook',methods=['GET','POST'])
 def add_book():
+    if request.form:              
+        new_book= Book(book_name=request.form['book_name'],
+                       isbn=request.form['ISBN'],
+                       date_published=request.form['date_pusblished'],
+                       genre=request.form['genre'],
+                       date_sold=request.form['date_sold'],
+                       number_of_pages=request.form['number_of_pages'],
+                       language=request.form['language'],
+                       description=request.form['description']
+                       )
+        db.session.add(new_book)
+        db.session.commit()
+        return redirect(url_for('index'))
     return render_template('addbook.html')
+
+
+@app.route('/book/')
+def book(id):
+    book = Book.query.get(id)
+    return render_template('book.html', book=book)
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html')
 
 
 

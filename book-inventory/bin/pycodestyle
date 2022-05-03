@@ -1,4 +1,4 @@
-#!/home/sergioherrera/Documents/projects/python_projects/book_inventory/book-inventory/bin/python
+#!/home/sergioherrera/Documents/projects/python_projects/book_inventory/book-inventory/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
