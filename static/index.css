@@ -5,3 +5,7 @@
 #add-book{
     margin-right:1000px;
 }
+
+.card-img-top{
+    max-width:50px;
+}

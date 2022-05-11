@@ -40,10 +40,10 @@ def add_book():
     return render_template('addbook.html')
 
 
-@app.route('/book/')
+@app.route('/book/<id>')
 def book(id):
-    book = Book.query.get(id)
-    return render_template('book.html', book=book)
+    book=Book.query.get(id)
+    return render_template('book.html', book=book) #book=book.id
 
 
 @app.errorhandler(404)

@@ -1,26 +1,23 @@
 {%extends'layout.html' %}
 
-{%extends'layout.html' %}
+
 
 {%block button %}
 <a href={{url_for('add_book')}}>Add Book</a>
+<a href={{url_for('index')}}>Back</a>
 
 {% endblock %}
 
 {%block content %}
-<section>
-
-    <a href="{{url_for('add_book')}}">
-        <div>
-            <h2>{{ book.name }}</h2>}
-            <p>{{ book.date_published }}</p>
+<section id="book-data" class="card">
+    <img src="" alt="">
+   
+        <div id="book-name" class=" row card">
+            <h2>{{book.book_name}}</h2>}
+            <h2>{{ book.number_of_pages }} Pages</h2>
+            <h2>Description</h2>
             <p>{{ book.description }}</p>
         </div>
-
-
-    </a>
-
-
-
 </section>
+
 {% endblock %}
