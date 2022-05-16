@@ -1,0 +1,75 @@
+{%extends'layout.html' %}
+
+{%block button %}
+
+<button id="back-btn"><a href="{{url_for('index')}}">Back</a> </button>
+{% endblock %}
+
+{% block content %}
+<section>
+
+   
+        
+        <div>
+            <h2>Edit Book</h2>
+            <p>Age</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+
+
+                <form action="{{ url_for('edit_book', id=book.id)}}" method="POST">
+                    <fieldset>
+                        <legend>Book</legend>
+                        <div class="mb-3">
+                            <label for="bookname" class="form-label">Name of the book </label>
+                                <input  name="book_name"type="text" class="form-control" id="bookname" aria-describedby="bookname"placeholder="Please enter the name of the book in English" value="{{book.book_name}}">
+                        
+                        </div>
+                        <div class="mb-3">
+                             <label for="ISBN" class="form-label">ISBN </label>
+                                <input name="ISBN" type="text" class="form-control" id="ISBN" aria-describedby="ISBN"
+                            placeholder="Please enter ISBN for the book" value="{{book.isbn}}"">
+                    
+                         </div>
+                         <div class="mb-3">
+                            <label for="date_pusblished" class="form-label" placeholder="Please enter the  Publication date">Date Published </label>
+                                <input name="date_pusblished" type="date" class="form-control" id="date_pusblished"  value="{{book.date_published}}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="date_sold" class="form-label" placeholder="Please enter the date sold ">Date
+                            Sold</label>
+                                <input type="date"  name="date_sold"class="form-control" id="date_sold" value="{{book.date_sold}}">
+                        <div class="mb-3">
+                            <label for="genre" class="form-label" placeholder="Genre ">Genre</label>
+                                <input type="text" class="form-control" id="genre" name="genre"value="{{book.genre}}">
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="number_of_pages" class="form-label"  >Number of Pages</label>
+                                <input type="number" class="form-control" id="number_of_pages" name="number_of_pages" value="{{book.number_of_pages }}">
+                    
+                        </div>
+                        <div class="mb-3">
+                            <label for="language" class="form-label">Language</label>
+                            <input type="text" class="form-control" id="language" name="language" value="{{book.language}}">
+                        
+                        </div>
+                            <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" name="description">{{book.description}}</textarea>
+
+                        
+                        </div>
+                    </fieldset>
+                    
+                    <button type="submit" class="btn btn-primary">Update Book info</button>
+                </form> 
+
+
+
+
+
+</section>
+{% endblock %}

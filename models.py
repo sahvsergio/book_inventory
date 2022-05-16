@@ -7,7 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///books.db'
 db= SQLAlchemy(app)
 
 class Book(db.Model):
-    id=db.Column(db.Integer, primary_key=True)#primary key
+    id= db.Column(db.Integer, primary_key=True)#primary key
     created= db.Column('Created',db.DateTime, default = datetime.datetime.now)#timestamp when the item was created
     book_name=db.Column('Name of the book',db.String())
     date_published = db.Column('date_published', db.String())
