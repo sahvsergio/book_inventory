@@ -6,6 +6,7 @@ from flask import render_template
 from flask import url_for
 from flask import redirect
 from flask import request
+from flask import flash
 from models import db, Book, app, Flask
 
 
@@ -16,17 +17,26 @@ from models import db, Book, app, Flask
 
 @app.route('/')#decorator
 def index():
+    """creates the homepage for the app"""
     books=Book.query.all()
-    return render_template('index.html', books=books)
+    total_books=len(books)
+    
+    return render_template('index.html', books=books, total_books=total_books)
 
 @app.route('/book/<id>')
 def book(id):
+    """Creates the view for the app"""
     book=Book.query.get_or_404(id)
-    return render_template('book.html', book=book) #book=book.id
+    book_length=Book.query.all()
+    
+    
+    return render_template('book.html', book=book, book_length=book_length)
 
 
 @app.route('/addbook', methods=['GET', 'POST'])
 def add_book():
+    """Creates the route to create new books on the app and adds it to the database"""
+    
     if request.form:
         new_book = Book(book_name=request.form['book_name'],
                         isbn=request.form['ISBN'],
@@ -39,13 +49,17 @@ def add_book():
                         )
         db.session.add(new_book)
         db.session.commit()
+       
+        
         return redirect(url_for('index'))
     return render_template('addbook.html')
 
 
 @app.route('/edit/<id>', methods=['GET', 'POST'])
 def edit_book(id):
+    """Edits the book information both in the app and database"""
     book=Book.query.get(id)
+    
     if request.form:
         book.book_name=request.form['book_name']
         book.isbn = request.form['ISBN']
@@ -57,14 +71,17 @@ def edit_book(id):
         book.description = request.form['description']
         
         db.session.commit()
+        
+        flash('The book was successfully edited to the database')
         return redirect(url_for('index'))
     
-    return render_template('edit-book.html',book=book)
+    return render_template('edit-book.html')
 
 
 
 @app.route('/delete/<id>')
 def delete_book(id):
+    """deletes books from the database and from the  app """
     book=Book.query.get(id)
     db.session.delete(book)
     db.session.commit()
@@ -72,7 +89,10 @@ def delete_book(id):
 
 @app.errorhandler(404)
 def not_found(error):
+    """Handles 404 errors-non existant pages"""
     return render_template('404.html', msg=error),404
+
+
 
 
 

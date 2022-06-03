@@ -7,20 +7,29 @@
 {% endblock %}
 
 {%block content %}
+<h5> There are  currently a total of <strong> {{total_books}}</strong> books in the inventory</h5>
+        
 <section id ="intro" class="bg-info mt-5 ">
+
+    
     <p >Welcome to my book inventory app. it was initally created with the intention of keeping a record of my current books( Yes, I am a bookworm of sorts) and also keeping track
         of those books I have decided to sell as I no longer have   a need for. I hope you enjoy iy </p> 
+        
+        
 </section>
+<hr>
  <section id ='book-cards' class="card">  
+   
     {% for book in books %}
         <a href="{{ url_for('book', id=book.id) }}">
-            <div  class='class="card-body'>
+            <div  class="card-body">
+
                     <img  class="card-img-top" src="static/269941827_10160124364520799_5438648958714937431_n.jpg" alt="">
                     <h2 class=" card-title"> {{ book.book_name}}</h2>
                      <p class="card-subtitle">{{ book.genre }}</p>
-                     <p class="card-text"">{{book.number_of_pages}} pages</p>
+                     <p class="card-text">{{ book.number_of_pages}} pages</p>
                      <h2 id="description" class="class-title">Description</h2>
-                     <p class=" card-text"">{{book.description}}</p>
+                     <p class=" card-text">{{book.description}}</p>
         
    
              

@@ -9,3 +9,12 @@
 .card-img-top{
     max-width:50px;
 }
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.card-body{
+    border:5px solid red;
+    background-color:#5A763Cff;
+}
