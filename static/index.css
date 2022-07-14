@@ -1,20 +1,51 @@
-#logo{
-    max-width:30%;
-    max-height:60%;
-    }
-#add-book{
-    margin-right:1000px;
+header{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                align-content: space-between;
+
+}
+header img{
+                border-radius: 50%;
+                border: 4px solid #800000;    
+                display: block;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: auto;
+                order: 0;
+}
+header h1{
+                display: block;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: auto;
+                order: 0;
+                t
+}
+header button{
+                display: block;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: auto;
+                align-self: auto;
+                order: 0;
+                font-family: arial;
+                color: #14396A !important;
+                font-size: 14px;
+                text-shadow: 1px 1px 0px #7CACDE;
+                box-shadow: 1px 1px 1px #BEE2F9;
+                padding: 10px 25px;
+                border-radius: 18px;
+                border: 5px groove #3866A3;
+                background: #63B8EE;
+                background: linear-gradient(to top, #63B8EE, #468CCF);
+                
 }
 
-.card-img-top{
-    max-width:50px;
-}
-.card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-.card-body{
-    border:5px solid red;
-    background-color:#5A763Cff;
+a{
+        text-decoration:none;
 }

@@ -1,4 +1,4 @@
-# !/usr/bin/env/python
+#!/usr/bin/env/python
 
 
 from crypt import methods
@@ -15,11 +15,14 @@ from models import db, Book, app, Flask
 
 #create routes(visible parts of the site- urls)
 
-@app.route('/')#decorator
+@app.route('/', methods=['GET', 'POST'])  # decorator
 def index():
     """creates the homepage for the app"""
     books=Book.query.all()
     total_books=len(books)
+    
+    
+    
     
     return render_template('index.html', books=books, total_books=total_books)
 
@@ -28,6 +31,7 @@ def book(id):
     """Creates the view for the app"""
     book=Book.query.get_or_404(id)
     book_length=Book.query.all()
+    
     
     
     return render_template('book.html', book=book, book_length=book_length)
@@ -87,10 +91,15 @@ def delete_book(id):
     db.session.commit()
     return redirect(url_for('index'))
 
+
+
+
 @app.errorhandler(404)
 def not_found(error):
     """Handles 404 errors-non existant pages"""
     return render_template('404.html', msg=error),404
+
+
 
 
 

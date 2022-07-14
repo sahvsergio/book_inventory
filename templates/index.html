@@ -7,16 +7,23 @@
 {% endblock %}
 
 {%block content %}
-<h5> There are  currently a total of <strong> {{total_books}}</strong> books in the inventory</h5>
+<h5> There are  currently a total of <strong class="total"> {{total_books}}</strong> books in the inventory</h5>
         
 <section id ="intro" class="bg-info mt-5 ">
 
     
     <p >Welcome to my book inventory app. it was initally created with the intention of keeping a record of my current books( Yes, I am a bookworm of sorts) and also keeping track
-        of those books I have decided to sell as I no longer have   a need for. I hope you enjoy iy </p> 
-        
-        
+        of those books I have decided to sell as I no longer have   a need for. I hope you enjoy it </p> 
+
+
+   
+
 </section>
+ <form >
+        <label for="search">Search for a book</label>
+       <input name="search" type="search">
+        
+    </form>      
 <hr>
  <section id ='book-cards' class="card">  
    
