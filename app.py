@@ -108,6 +108,7 @@ def not_found(error):
 
 if __name__ =='__main__':#if it were to be exported to a diffent filem then the --main .- would be the name of the file it is exported to
     db.create_all()
+   """ app.run(debug=False,  port='8080', host='0.0.0.0')# making it run on the internet"""
     app.run(debug=True, port=8000, host='127.0.0.1')#making the app run, you just need to run the app.py file on the terminal
 
 
